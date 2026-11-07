@@ -1,0 +1,16 @@
+{
+  "name": "wavekat",
+  "description": "Official WaveKat call flows.",
+  "flows": [
+    {
+      "name": "ask",
+      "description": "Ask one question; the person answers with a key (1 to 4). Variables: intro, question, option1..option4.",
+      "path": "flows/ask.yaml"
+    },
+    {
+      "name": "notify",
+      "description": "Say a message twice, then hang up. Variables: intro, message.",
+      "path": "flows/notify.yaml"
+    }
+  ]
+}

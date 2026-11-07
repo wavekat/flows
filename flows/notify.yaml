@@ -1,0 +1,18 @@
+schema_version: 4
+name: notify
+entry: say
+variables:
+  intro:   { description: Who is calling, default: "Claude has a message.", max_len: 120 }
+  message: { description: The message, default: "Something needs your attention on screen.", max_len: 400 }
+nodes:
+  say:
+    kind: greeting
+    prompt: "{{intro}} {{message}}"
+    exits: { next: again }
+  again:
+    kind: greeting
+    prompt: "Again: {{message}}"
+    exits: { next: bye }
+  bye:
+    kind: hangup
+    prompt: Goodbye.
