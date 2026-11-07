@@ -47,6 +47,18 @@ marketplace:
 }
 ```
 
+Only `name` and `flows` (each with `name`, `description` and `path`) are
+required. Optional fields are shown on the flow's web page and in search:
+
+| Field | Where | Meaning |
+|---|---|---|
+| `title` | marketplace, flow | A display name ("Ask a question") |
+| `author` | marketplace | `{ "name": …, "url": … }` |
+| `homepage` | marketplace | A link for people who want to know more |
+| `version` | flow | The flow's version, like `1.0.0` |
+| `tags` | flow | A few words for search |
+| `example` | flow | Example `--var` values, shown as a ready-to-run command |
+
 Add it and install from it:
 
 ```sh
