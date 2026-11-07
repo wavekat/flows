@@ -1,16 +1,44 @@
 {
   "name": "wavekat",
+  "title": "WaveKat official flows",
   "description": "Official WaveKat call flows.",
+  "author": {
+    "name": "WaveKat",
+    "url": "https://wavekat.com"
+  },
+  "homepage": "https://github.com/wavekat/flows",
   "flows": [
     {
       "name": "ask",
+      "title": "Ask a question",
       "description": "Ask one question; the person answers with a key (1 to 4). Variables: intro, question, option1..option4.",
-      "path": "flows/ask.yaml"
+      "path": "flows/ask.yaml",
+      "version": "1.0.0",
+      "tags": [
+        "question",
+        "confirm",
+        "agent"
+      ],
+      "example": {
+        "question": "Deploy to production now?",
+        "option1": "Yes",
+        "option2": "No, wait"
+      }
     },
     {
       "name": "notify",
+      "title": "Leave a message",
       "description": "Say a message twice, then hang up. Variables: intro, message.",
-      "path": "flows/notify.yaml"
+      "path": "flows/notify.yaml",
+      "version": "1.0.0",
+      "tags": [
+        "message",
+        "alert",
+        "agent"
+      ],
+      "example": {
+        "message": "The nightly build failed. Details are on screen."
+      }
     }
   ]
 }
